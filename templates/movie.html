@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ movieData.title }} > Watch them all !</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/movie.css">
+</head>
+<body>
+    <header>
+        <h1 style="cursor: pointer;" onclick="window.location.href='/'">Watch them all !</b></h1>
+    </header>
+    <div class="content" >
+        <div class="background-image" style="background-image: url('{{movieData.image_url}}');"></div>
+        
+        <div class="titleAndDescription">
+            <h2 class="movieTitle">{{ movieData.title }}</h2>
+            <p class="description">{{ movieData.description }}</p>
+    
+        </div>
+
+        <!-- <img class="movieImage" src="{{movieData.image_url}}" alt=""> -->
+        <iframe class="trailerIframe" width="560" height="315" 
+            src="https://yewtu.be/embed/{{ movieData.trailer_YTB_ID }}" 
+            title="Trailer" 
+            frameborder="0" 
+            allowfullscreen>
+        </iframe>
+
+        <a href="{{ movieData.magnet }}" target="_blank" rel="noopener noreferrer">
+            <button class="downloadButton">Download torrent</button>
+        </a>
+    </div>
+</body>
+</html>

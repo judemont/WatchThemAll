@@ -1,0 +1,28 @@
+.movies {
+    margin-top: 100px;
+    margin-left: 50px;
+    display: flex;
+}
+
+.movies a {
+    padding: 0;
+    margin: 20px;
+    width: fit-content;
+}
+
+
+.movies img {
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.movies img:hover {
+    border-radius: 30px;
+    transform: scale(1.2);
+}
+
+@media only screen and (max-width: 600px) {
+    .movies {
+        margin-left: 0;
+    }
+}

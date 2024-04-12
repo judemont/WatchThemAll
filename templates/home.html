@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch them all !</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/home.css">
+</head>
+<body>
+    <header>
+        <h1>Watch them all !!</b></h1>
+        <select name="" id="">
+            <option value="fr_FR">French<option>
+        </select>
+    </header>
+    <div class="movies">
+        {% for i in range(moviesDataLength) %}
+        <a href="movie/{{i}}">
+            <img width="150" height="225" src="{{moviesData[i].image_url}}" alt="">
+        </a>
+        {% endfor %}
+    </div>
+</body>
+</html>
