@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "title": "Harry Potter \u00e0 l'\u00e9cole des sorciers",
+    "isSeries": false,
+    "description": "\nOrphelin, le jeune Harry Potter peut enfin quitter ses tyranniques oncle et tante Dursley lorsqu'un curieux messager lui r\u00e9v\u00e8le qu'il est un sorcier. \u00c0 11 ans, Harry va enfin pouvoir int\u00e9grer la l\u00e9gendaire \u00e9cole de sorcellerie de Poudlard, y trouver une famille digne de ce nom et des amis, d\u00e9velopper ses dons, et pr\u00e9parer son glorieux avenir.\n",
+    "magnet": "magnet:?xt=urn:btih:97FD963FD2F194DDC3768E38444F81750B8B50D5&tr=udp://eddie4.nl:6969/announce&tr=udp://shadowshq.yi.org:6969/announce&tr=udp://tracker.leechers-paradise.org:6969/announce&tr=udp://tracker.pirateparty.gr:6969/announce&tr=udp://tracker.coppersurfer.tk:6969/announce&tr=udp://tracker.coppersurfer.tk:80/announce&tr=udp://9.rarbg.com:2800/announce&tr=udp://9.rarbg.me:2780/announce&tr=udp://9.rarbg.to:2710/announce&tr=udp://p4p.arenabg.com:1337/announce&tr=udp://public.popcorn-tracker.org:6969/announce&tr=udp://tracker.vanitycore.co:6969/announce&tr=udp://open.stealth.si:80/announce&tr=udp://tracker.zer0day.to:1337/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://tracker.internetwarriors.net:1337/announce&tr=udp://ipv4.tracker.harry.lu:80/announce&tr=udp://explodie.org:6969/announce&tr=http://inferno.demonoid.ph:3389/announce",
+    "language_code": "fr-FR",
+    "trailer_YTB_ID": "P1BGgqhVGAI",
+    "image_url": "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/fbxQ44VRdM2PVzHSNajUseUteem.jpg",
+    "tmdb_url": "https://www.themoviedb.org/movie/671-harry-potter-and-the-philosopher-s-stone?language=fr-FR"
+  }
+]

@@ -3,6 +3,7 @@ import json
 import requests
 from bs4 import BeautifulSoup
 import re
+
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:42.0) Gecko/20100101 Firefox/42.0',
 }

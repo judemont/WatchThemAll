@@ -5,6 +5,20 @@ import json
 app = Flask(__name__)
 app.secret_key = "suuuuuper secret key (;"
 
+
+LANGUAGES = [
+    ('en-US', 'English'),
+    ('es-ES', 'Spanish'),
+    ('fr-FR', 'French'),
+    ('de-DE', 'German'),
+    ('it-IT', 'Italian'),
+    ('zh-CN', 'Chinese (Simplified)'),
+    ('ja-JP', 'Japanese'),
+    ('ko-KR', 'Korean'),
+    ('pt-BR', 'Portuguese'),
+    ('ru-RU', 'Russian')
+]
+
 with open("./movies.json", "r") as file:
     moviesData = json.load(file)
 
@@ -16,7 +30,7 @@ def home():
 
     moviesDataInLanguage = [movieData for movieData in moviesData if movieData["language_code"].startswith(session["languageCode"].split("-")[0])]
 
-    return render_template('home.html', moviesData=moviesDataInLanguage, moviesDataLength=len(moviesDataInLanguage))
+    return render_template('home.html', moviesData=moviesDataInLanguage, moviesDataLength=len(moviesDataInLanguage), languages=LANGUAGES, languageCode=session["languageCode"])
 
 
 @app.route('/movie/<index>/')
