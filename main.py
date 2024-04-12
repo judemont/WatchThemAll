@@ -61,11 +61,17 @@ def home():
     )
 
 
-@app.route("/movie/<index>/")
-def movie(index):
-    with open("./movies.json", "r") as file:
-        moviesData = json.load(file)
-    return render_template("movie.html", movieData=moviesData[int(index)])
+@app.route("/movie/<id>/")
+def movie(id):
+    db: Database = Database()
+    db.init()
+    moviesData = db.getMovies()
+
+    movieData = [movieData for movieData in moviesData if movieData.id == int(id)][0]
+    return render_template(
+        "movie.html",
+        movieData=movieData,
+    )
 
 
 @app.route("/changeLanguage", methods=["GET"])

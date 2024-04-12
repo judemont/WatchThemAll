@@ -30,9 +30,9 @@
         </form>
     </header>
     <div class="movies">
-    {% for i in range(moviesDataLength) %}
-        <a href="movie/{{i}}">
-            <img width="150" height="225" src="{{moviesData[i].image_url}}" alt="">
+    {% for movieData in moviesData %}
+        <a href="movie/{{ movieData.id }}">
+            <img width="150" height="225" src="{{movieData.image_url}}" alt="">
         </a>
     {% endfor %}
     </div>
