@@ -46,7 +46,8 @@ movieData = {
     "magnet": torrentMagnetLink,
     "language_code": langCode,
     "trailer_YTB_ID": youtubeTrailerID,
-    "image_url": imageUrl
+    "image_url": imageUrl,
+    'tmdb_url': tmdbUrl
 }
 
 with open("./movies.json", "r") as file:
