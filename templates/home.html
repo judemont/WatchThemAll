@@ -10,8 +10,14 @@
 <body>
     <header>
         <h1>Watch them all !!</b></h1>
-        <form action="changeLanguage" method="get">
-            <select name="languageCode">
+
+        <form class="searchForm" action="/" method="get">
+            <input class="searchInput" placeholder="What do you want to watch ?" type="text" name="q">
+            <button class="searchButton" type="submit">Search</button>
+        </form>
+
+        <form class="languageForm" action="changeLanguage" method="get">
+            <select class="languageSelector" name="languageCode">
             {% for language in languages %}
                 {% if languageCode == language[0]: %}
                     <option selected value="{{ language[0] }}">{{ language[1] }}</option>
@@ -20,7 +26,7 @@
                 {% endif %}
             {% endfor %}
             </select>
-            <button type="submit">Apply</button>
+            <button class="applyLanguageButton" type="submit">Apply</button>
         </form>
     </header>
     <div class="movies">

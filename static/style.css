@@ -15,3 +15,10 @@ header h1 {
     font-size: 36px;
     text-align: center;
 }
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}

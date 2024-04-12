@@ -21,6 +21,42 @@
     transform: scale(1.2);
 }
 
+.searchInput {
+    width: 500px;
+    max-width: 70%;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    background-color: wheat;
+}
+
+.searchButton, .applyLanguageButton {
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(231, 198, 137);
+}
+
+.applyLanguageButton {
+    background-color: #d19c3a !important;
+}
+
+.searchForm, .languageForm {
+    text-align: center;
+}
+
+.languageForm {
+    margin-top: 20px;
+}
+
+.languageSelector {
+    background-color: #ccaa6b;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
 @media only screen and (max-width: 600px) {
     .movies {
         margin-left: 0;
