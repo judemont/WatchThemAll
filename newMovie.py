@@ -6,6 +6,20 @@ import re
 from database import Database
 from models.movie import Movie
 
+LANGUAGES = [
+    ("en-US", "English"),
+    ("es-ES", "Spanish"),
+    ("fr-FR", "French"),
+    ("de-DE", "German"),
+    ("it-IT", "Italian"),
+    ("zh-CN", "Chinese (Simplified)"),
+    ("ja-JP", "Japanese"),
+    ("ko-KR", "Korean"),
+    ("pt-BR", "Portuguese"),
+    ("ru-RU", "Russian"),
+]
+
+
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:42.0) Gecko/20100101 Firefox/42.0",
 }
@@ -16,7 +30,7 @@ langQuestion = [
     inquirer.List(
         "langCode",
         message="Movie language",
-        choices=[("English", "en-EN"), ("French", "fr-FR")],
+        choices=[lang[::-1] for lang in LANGUAGES],
     )
 ]
 

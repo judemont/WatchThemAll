@@ -51,7 +51,6 @@ class Database:
     def getMovies(self, id: int | None = None) -> list[Movie]:
         cursor = self.conn.cursor()
         if id == None:
-            print("SSSAA")
             cursor.execute(
                 """
                 SELECT * from movies
@@ -66,7 +65,7 @@ class Database:
             )
 
         results = cursor.fetchall()
-        print(results)
+
         movies = []
 
         for result in results:

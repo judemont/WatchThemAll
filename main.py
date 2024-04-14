@@ -28,7 +28,6 @@ def home():
     db: Database = Database()
     db.init()
     moviesData = db.getMovies()
-    print(moviesData)
 
     if not "languageCode" in session:
         session["languageCode"] = "en-EN"
