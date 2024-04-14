@@ -8,15 +8,15 @@ from models.movie import Movie
 
 LANGUAGES = [
     ("en-US", "English"),
-    ("es-ES", "Spanish"),
+    # ("es-ES", "Spanish"),
     ("fr-FR", "French"),
-    ("de-DE", "German"),
-    ("it-IT", "Italian"),
-    ("zh-CN", "Chinese (Simplified)"),
-    ("ja-JP", "Japanese"),
-    ("ko-KR", "Korean"),
-    ("pt-BR", "Portuguese"),
-    ("ru-RU", "Russian"),
+    # ("de-DE", "German"),
+    # ("it-IT", "Italian"),
+    # ("zh-CN", "Chinese (Simplified)"),
+    # ("ja-JP", "Japanese"),
+    # ("ko-KR", "Korean"),
+    # ("pt-BR", "Portuguese"),
+    # ("ru-RU", "Russian"),
 ]
 
 
