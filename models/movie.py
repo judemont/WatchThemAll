@@ -1,13 +1,13 @@
 class Movie:
     def __init__(
         self,
-        title,
-        description,
-        magnet,
-        language_code,
-        trailer_YTB_ID,
-        image_url,
-        tmdb_url,
+        title="",
+        description="",
+        magnet="",
+        language_code="",
+        trailer_YTB_ID="",
+        image_url=2,
+        tmdb_url="",
         isSeries=False,
         id=0,
     ):

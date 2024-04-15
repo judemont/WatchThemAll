@@ -3,6 +3,8 @@ import os
 import difflib
 
 from database import Database
+from models.movie import Movie
+from tmdb import extractMovie
 
 
 app = Flask(__name__)
@@ -64,7 +66,7 @@ def home():
 def movie(id):
     db: Database = Database()
     db.init()
-    moviesData = db.getMovies()
+    moviesData: list[Movie] = db.getMovies()
 
     movieData = [movieData for movieData in moviesData if movieData.id == int(id)][0]
     return render_template(
@@ -78,6 +80,35 @@ def changeLanguage():
     languageCode = request.args.get("languageCode")
     session["languageCode"] = languageCode
     return redirect("/")
+
+
+@app.route("/new/")
+def newMovie():
+    return render_template(
+        "newMovie.html",
+        languages=LANGUAGES,
+    )
+
+
+@app.route("/saveNewMovie", methods=["GET"])
+def saveNewMovie():
+    magnet = request.args.get("magnet")
+    tmdbUrl = request.args.get("tmdbUrl")
+    movie: Movie = extractMovie(
+        tmdbUrl=tmdbUrl, langCode=request.args.get("languageCode")
+    )
+
+    movie.magnet = magnet
+
+    db: Database = Database()
+    db.init()
+
+    duplicatedMovie: list[Movie] = db.getMovies(tmdbUrl=tmdbUrl)
+    if len(duplicatedMovie) <= 0:
+        db.newMovie(movie)
+        return redirect("/")
+    else:
+        return redirect("/")
 
 
 if __name__ == "__main__":
