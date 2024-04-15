@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch them all !</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/newMovie.css">
+</head>
+<body>
+    <header>
+        <h1 style="cursor: pointer;" onclick="window.location.href='/'">Watch them all !</h1>
+    </header>
+
+    <h2>Submit new movie</h2>
+    <form class="newMovieForm" action="/saveNewMovie" method="get">
+        <input class="magnetInput"  required pattern="^magnet:.*" placeholder="Magnet link" type="text" name="magnet" >
+        <input class="tmdbUrlInput" required type="url" pattern="^https:\/\/www.themoviedb.org\/.*" placeholder="TheMovieDB.org movie url" name="tmdbUrl" >
+
+        <select required class="languageSelector" name="languageCode">
+            <option value="">Movie language</option>
+            {% for language in languages %}
+                <option value="{{ language[0] }}">{{ language[1] }}</option>
+            {% endfor %}
+        </select>
+
+        <button class="submitButton" type="submit">Submit</button>
+    </form>
+</body>

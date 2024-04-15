@@ -48,20 +48,29 @@ class Database:
 
         self.conn.commit()
 
-    def getMovies(self, id: int | None = None) -> list[Movie]:
+    def getMovies(
+        self, id: int | None = None, tmdbUrl: str | None = None
+    ) -> list[Movie]:
         cursor = self.conn.cursor()
-        if id == None:
+        if id == None and tmdbUrl == None:
             cursor.execute(
                 """
                 SELECT * from movies
                 """
             )
-        else:
+        elif id != None:
             cursor.execute(
                 """
                 SELECT * from movies WHERE id=(?)
                 """,
                 id,
+            )
+        elif tmdbUrl != None:
+            cursor.execute(
+                """
+                SELECT * from movies WHERE tmdb_url=(?)
+                """,
+                (tmdbUrl,),
             )
 
         results = cursor.fetchall()
